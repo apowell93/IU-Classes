@@ -1,3 +1,3 @@
 # IU-Classes
-Projects/code from classes @ IU
-#test   
+Projects/code compiled from classes @ IU
+Written by Anthony Powell between 2011-2015 
