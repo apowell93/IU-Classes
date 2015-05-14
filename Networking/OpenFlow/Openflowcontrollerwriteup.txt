@@ -1,0 +1,25 @@
+Anthony Powell
+anjopowe
+CSCI-P438
+Assignment: OpenFlow POX Learning Switch Write-Up
+12/14/2014
+
+The OpenFlow controller I've written was done using Python and the POX library.
+By editing the tutorial controller file in the POX repo, the act_like_switch function
+is used to handle packets as opposed to act_like_hub.
+
+The act_like_switch function works by first adding the packet's source port to the
+mac_to_port dictionary. If the destination port is NOT in the dictionary, it then 
+resends the packet to all port, just as the act_like_hub function did.
+
+If the destination port IS in the dictionary, a flow_mod is set up (msg) that 
+sets the match to the attributes of the received packets. 
+
+Two timeouts are also set in the flow_mod, an idle and hard timeout. The idle
+timeout (10 seconds) determines how long the flow entry will sit idle before
+being deleted. The hard timeout (30 seconds) is the length until the entry
+is deleted, regardless of if it is idle or not. 
+
+An action output is then set to send the packet to the correct port (dest_port).
+
+Then the packet is send via the connection (self.connection.send(msg)).
