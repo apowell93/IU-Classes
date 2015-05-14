@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- activity_first_real_app_about.xml
+Creates layout for about activity
+Created by: Anthony Powell
+Created on: 2/17/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/19/15
+Assignment/Project: A290 Android Development
+Part of: Project 3 - A290 First Real Application
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:id="@+id/AboutScrollView"
+	android:layout_width="match_parent"
+ 	android:layout_height="match_parent"
+ 	android:padding="10dp" >
+ 
+    <!--  displays string with application information -->
+ 	<TextView
+ 		android:id="@+id/AboutContent"
+ 		android:layout_width="wrap_content"
+ 		android:layout_height="wrap_content"
+ 		android:text="@string/AboutText"
+ 	/>
+ 	
+ 	
+
+</ScrollView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- activity_learn_guitar_tuner.xml
+Creates layout for tuner activity
+Created by: Anthony Powell
+Created on: 3/3/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/6/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f7daa7" >
+    
+    <ListView
+        android:id="@+id/ChordView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/border"
+        android:dividerHeight="2dp"
+        android:textColor="#990a11"
+        android:fontFamily="sans-serif-medium" />
+    
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- strings.xml
+Defines strings for Project 2 - MyFirstDialog
+Created by: Anthony Powell
+Created on: 2/12/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/12/15
+Assignment/Project: A290 Android Development
+Part of: Project 2 - My First Dialog
+-->
+
+<!-- Added 2 strings, 
+'ClickDialog' - text displayed on button
+'TalkToMe' - text to be displayed above dialog -->
+
+<resources>
+
+    <string name="app_name">My First Dialog</string>
+    <string name="TalkToMe">This is a dialog so try talking to me!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ClickDialog">Click here to view dialog and select an option(s).</string>
+
+</resources>

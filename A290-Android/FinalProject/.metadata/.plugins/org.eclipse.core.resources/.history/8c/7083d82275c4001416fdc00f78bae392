@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- dimens.xml
+Creates dimen type resources for app
+Created by: Anthony Powell
+Created on: 3/2/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/6/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-
+
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

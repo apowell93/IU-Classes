@@ -1,0 +1,12 @@
+package edu.indiana.learnguitar;
+
+public class Lesson {
+
+	public String name;
+	public String content1;
+	public String content2;
+	public String content3;
+	
+	
+	
+}

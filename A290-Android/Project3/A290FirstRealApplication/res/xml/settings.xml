@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- settings.xml
+Creates layout for settings page
+Created by: Anthony Powell
+Created on: 2/17/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/19/15
+Assignment/Project: A290 Android Development
+Part of: Project 3 - A290 First Real Application
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!--  defines checkboxes for options on the settings page -->
+ 	<CheckBoxPreference
+	 	android:key="music"
+	 	android:title="@string/MusicTitle"
+	 	android:summary="@string/MusicDetail"
+	 	android:defaultValue="true" 
+	/>
+ 	
+	<CheckBoxPreference
+		android:key="hints"
+		android:title="@string/HintsTitle"
+		android:summary="@string/HintsDetail"
+		android:defaultValue="true" 
+	/>
+
+</PreferenceScreen>

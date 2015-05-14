@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- AndroidManifest.xml
+Creates theme for Project 2 - My First Activity
+Created by: Anthony Powell
+Created on: 2/10/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/12/15
+Assignment/Project: A290 Android Development
+Part of: Project 2 - My First Activity
+-->
+
+<!--  changed theme to dialog -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.indiana.myfirstactivity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Dialog" >
+        <activity
+            android:name=".FirstActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

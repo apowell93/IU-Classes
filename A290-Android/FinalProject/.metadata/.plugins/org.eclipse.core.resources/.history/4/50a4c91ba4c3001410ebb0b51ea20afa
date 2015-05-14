@@ -1,0 +1,138 @@
+package edu.indiana.learnguitar;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+public class LearnGuitarIndSong extends Activity {
+
+	public static final String GPOS = "edu.indiana.learnguitar.gPosition";
+	public static final int DEFAULT_SONG = 0;	
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        //layout params for objects within layout
+        LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        
+        /*data for songs - START*/
+        //add new array and data for new page following this format
+        int songPosition = getIntent().getIntExtra(LPOS, DEFAULT_SONG);
+        ArrayList<String> songStrings = new ArrayList<String>();
+        ArrayList<ImageView> songImages = new ArrayList<ImageView>();
+        //for determining whether imageView or textView is next in layout
+        ArrayList<String> songTypes = new ArrayList<String>();
+        
+        String title;
+        if (lessonPosition == 0) {
+        	//lesson 1 layout
+        	title = "Lesson 1";
+	    	//images for layout - displayed as ImageView's
+	    	Drawable amajor = getResources().getDrawable( R.drawable.amajor );
+	    	ImageView lesson1Image1 = new ImageView(this);
+	    	lesson1Image1.setImageDrawable(amajor);
+	    	lesson1Image1.setLayoutParams(lparams);
+	    	lesson1Image1.setId(View.generateViewId());
+	    	Drawable tabexample = getResources().getDrawable( R.drawable.tabexample);
+	      	ImageView lesson1Image2 = new ImageView(this);
+	    	lesson1Image2.setImageDrawable(tabexample);
+	    	lesson1Image2.setId(View.generateViewId());
+	    	lesson1Image2.setLayoutParams(lparams);
+	
+	    	//layout order for lesson 1
+	    	lessonStrings.add(getString(R.string.Lesson1Text1));
+	    	lessonStrings.add(getString(R.string.Lesson1Text2));
+	    	lessonStrings.add(getString(R.string.Lesson1Text3));
+	    	lessonImages.add(lesson1Image1);
+	    	lessonStrings.add(getString(R.string.Lesson1Text4));
+	    	lessonImages.add(lesson1Image2);
+	    	lessonStrings.add(getString(R.string.Lesson1Text5));
+	    	lessonStrings.add(getString(R.string.Lesson1Text6));
+	    	//layout types order for building final layout  & differentiating between imageview and textview
+	    	lessonTypes.add("string");
+	    	lessonTypes.add("string");
+	    	lessonTypes.add("string");
+	    	lessonTypes.add("image");
+	    	lessonTypes.add("string");
+	    	lessonTypes.add("image");
+	    	lessonTypes.add("string");
+	    	lessonTypes.add("string");
+	    	
+	    	
+        } else if (lessonPosition == 1) {
+        	//lesson 2 layout
+        	title = "Lesson 2";
+        	
+        } else if (lessonPosition == 2) {
+        	//lesson 3 layout
+        	title = "Lesson 3";
+        	
+        } else {
+        	title = "ERROR"; //should never happen - initializes "title" variable for 'else' to avoid error below
+        }
+    	/*data for lessons - END*/
+
+		//initialize layout of activity
+        ScrollView scroll = new ScrollView(this);
+		scroll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		scroll.setBackgroundColor(Color.DKGRAY);
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		layout.setBackgroundColor(Color.DKGRAY);
+
+		//set title
+		setTitle(title);
+		//set remainder of layout - loops through currentLesson array to add textViews and/or images
+		int s = 0; //current string array position
+		int i = 0; //current image array position
+		for (int p = 1; p < lessonTypes.size(); p++) {
+			if (lessonTypes.get(p).equals("string")) { //then textview will be added to layout
+				TextView text = new TextView(this);
+		        text.setLayoutParams(lparams);
+				text.setTextAppearance(this, android.R.attr.textAppearanceMedium);
+			    text.setText(lessonStrings.get(s));
+				layout.addView(text);
+				s++;
+			} else { //if its not text, it'll be an image
+				layout.addView(lessonImages.get(i));
+				i++;
+			}
+		}
+		scroll.addView(layout);
+		setContentView(scroll);
+	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }	
+	
+}

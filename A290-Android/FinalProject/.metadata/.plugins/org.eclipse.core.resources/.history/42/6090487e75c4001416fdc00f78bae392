@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- listitem.xml
+Creates layout for listitems used in application
+Created by: Anthony Powell
+Created on: 3/2/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/6/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv"
+    android:textColor="#990a11"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_width="match_parent"
+    android:fontFamily="sans-serif-medium"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:minHeight="?android:attr/listPreferredItemHeight" />

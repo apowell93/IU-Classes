@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- border.xml
+Creates border drawable to be used on the listview items
+Created by: Anthony Powell
+Created on: 3/6/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/6/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-->
+
+<shape 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle" >
+    <solid 
+        android:color="#ffffff" />
+    <stroke 
+        android:width="1dip" 
+        android:color="#000000"/>
+</shape>

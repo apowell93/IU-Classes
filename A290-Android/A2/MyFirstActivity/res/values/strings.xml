@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- strings.xml
+Defines strings for Project 2 - My First Activity
+Created by: Anthony Powell
+Created on: 2/10/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/12/15
+Assignment/Project: A290 Android Development
+Part of: Project 2 -  My First Activity
+-->
+
+<!-- modified and renamed the string to be displayed in first activity
+'firstact_dialog'
+-->
+<resources>
+
+    <string name="app_name">My First Activity</string>
+    <string name="firstact_dialog">This is my first activity!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

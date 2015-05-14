@@ -1,0 +1,106 @@
+package edu.indiana.learnguitar;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.content.Intent;
+import android.view.View.OnClickListener;
+
+
+public class LearnGuitarMain extends Activity implements OnClickListener {
+
+	public void onClick(View v) {
+		switch(v.getId()) {
+			case R.id.LessonsButton:
+				//open about activity page dialog
+				Intent iLessons = new Intent(this, LearnGuitarLessons.class);
+				startActivity(i);
+				break;
+			
+			case R.id.ChordsButton:
+				//open chords home page
+				Intent iChords = new Intent(this, LearnGuitarChords.class);
+				startActivity(i);
+				break;
+				
+			case R.id.ScalesButton:
+				//open scales home page
+				Intent iScales = new Intent(this, LearnGuitarScales.class);
+				startActivity(i);
+				break;
+				
+			case R.id.SongsButton:
+				//open songs home page
+				Intent iSongs = new Intent(this, LearnGuitarSongs.class);
+				startActivity(i);
+				break;
+				
+			case R.id.TunerButton:
+				//open tuner
+				Intent iTuner = new Intent(this, LearnGuitarTuner.class);
+				startActivity(i);
+				break;
+			
+			case R.id.AboutButton:
+				//open about activity page dialog
+				Intent i = new Intent(this, LearnGuitarAbout.class);
+				startActivity(i);
+				break;
+				
+			case R.id.ExitButton:
+				/* exit application */
+				finish();
+				break;	
+		}	
+	}
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_learn_guitar_main);
+        
+        /* create buttons and set OnClickListener */
+        View LessonsButton = findViewById(R.id.LessonsButton);
+        LessonsButton.setOnClickListener(this);
+        
+        View ChordsButton = findViewById(R.id.ChordsButton);
+        ChordsButton.setOnClickListener(this);
+        
+        View ScalesButton = findViewById(R.id.ScalesButton);
+        ScalesButton.setOnClickListener(this);
+        
+        View SongsButton = findViewById(R.id.SongsButton);
+        SongsButton.setOnClickListener(this);
+        
+        View TunerButton = findViewById(R.id.TunerButton);
+        TunerButton.setOnClickListener(this);    
+        
+        View AboutButton = findViewById(R.id.AboutButton);
+        AboutButton.setOnClickListener(this);
+        
+        View ExitButton = findViewById(R.id.ExitButton);
+        ExitButton.setOnClickListener(this);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}

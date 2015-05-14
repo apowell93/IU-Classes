@@ -1,0 +1,77 @@
+package edu.indiana.learnguitar;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.LinearLayout;
+
+public class LearnGuitarIndSong extends Activity {
+
+	public static final String GPOS = "edu.indiana.learnguitar.gPosition";
+	public static final int DEFAULT_SONG = 0;	
+	
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        //data for chord - chord diagrams to display
+        
+        
+        
+        
+        
+        //END of data for chords
+        
+        
+        
+    	//array containing all the arrays of the lessons, one is used based on user selection on prev page
+    	ArrayList<ArrayList<Object>> chordsList = new ArrayList<ArrayList<Object>>();
+    	//chordsList.add(chord1);
+        
+        //lesson position passed through from user selection
+		int chordPosition = getIntent().getIntExtra(CPOS, DEFAULT_CHORD);
+			
+		//initialize layout of activity
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		layout.setBackgroundColor(Color.DKGRAY);
+		
+		
+		//current lesson to be displayed
+		ArrayList<Object> currentChord = chordsList.get(chordPosition);
+		//set title
+		setTitle(currentChord.get(0).toString());
+        
+		
+		
+		
+	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }	
+	
+}

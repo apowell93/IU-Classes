@@ -1,0 +1,75 @@
+package edu.indiana.learnguitar;
+
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+public class LearnGuitarTuner extends Activity implements OnClickListener {
+
+	private MediaPlayer mp;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_learn_guitar_tuner);
+		setVolumeControlStream(AudioManager.STREAM_MUSIC);
+		findViewById(R.id.tunerButtonELow).setOnClickListener(this);
+		findViewById(R.id.tunerButtonA).setOnClickListener(this);
+		findViewById(R.id.tunerButtonD).setOnClickListener(this);
+		findViewById(R.id.tunerButtonG).setOnClickListener(this);
+		findViewById(R.id.tunerButtonB).setOnClickListener(this);
+		findViewById(R.id.tunerButtonEHigh).setOnClickListener(this);
+	}
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
+    public void onClick(View v){
+    	int resId;
+    	switch (v.getId()){
+	    	case R.id.tunerButtonELow: resId=R.raw.tunerButtonELow;
+	    	break;
+	    	case R.id.tunerButtonA: resId=R.raw.tunerButtonA;
+	    	break;
+	    	case R.id.tunerButtonD: resId=R.raw.tunerButtonD;
+	    	break;
+	    	case R.id.tunerButtonG: resId=R.raw.tunerButtonG;
+	    	break;
+	    	case R.id.tunerButtonB: resId=R.raw.tunerButtonB;
+	    	break;
+	    	case R.id.tunerButtonEHigh: resId=R.raw.tunerButtonEHigh;
+	    	break;
+	    	default: resId=R.raw.tunerButtonELow;
+	    	break;
+    	}
+    	if (mp != null) {
+    		mp.release();
+    		}
+    		mp = MediaPlayer.create(this, resId);
+    		mp.start();
+    }
+    }
+	
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Learn Guitar</string>
+    <string name="about_name">About \'Learn Guitar\'</string>
+    <string name="lessons_name">Lessons</string>
+    <string name="chords_name">Chords</string>
+    <string name="scales_name">Scales</string>
+    <string name="songs_name">Songs for Beginners</string>
+    <string name="tuner_name">Tuner</string>
+    
+    <string name="indLesson_name">Lesson</string>
+    <string name="indChord_name">Chord</string>
+    <string name="indScale_name">Scale</string>
+    <string name="indSong_name">Song</string>
+   
+    
+    <string name="action_settings">Settings</string>
+    <string name="SettingsLabel">Settings&#8230;</string>
+    <string name="SettingsShortcut">s</string>
+    <string name="SettingsTitle">Learn Guitar Settings</string>
+    
+    <string name="LessonsButtonLabel">Beginner Lessons</string>
+    <string name="ChordsButtonLabel">Chords</string>
+    <string name="ScalesButtonLabel">Scales</string>
+    <string name="SongsButtonLabel">Learn Songs</string>
+    <string name="TunerButtonLabel">Tuner</string>
+    <string name="AboutButtonLabel">About</string>
+    <string name="ExitButtonLabel">Exit</string>
+    <string name="MainActivityString1">Welcome!</string>
+    <string name="MainActivityString2">Select the page you\'d like to view:</string>
+
+    <string name="AboutText">add text for about dialog</string>
+    
+    
+    <!-- Lesson 1 String  -->
+    <string name="Lesson1Title">Lesson 1 - Introduction</string>
+    <string name="Lesson1Text1">Hello and welcome to \'Learn Guitar\'! In this course, I will go over the basics
+    			of learning how to play the guitar, acoustic or electric. In addition to the basic lessons,
+    			I have included sections in the application with chord and scale diagrams, tabs and chords for
+    			several beginner's songs, and a tuner to assist you and make sure you don't have to jump from
+    			my application to another app or website; you can get all the information you need right here!\n</string>
+    <string name="Lesson1Text2"></string>
+    <string name="Lesson1Text3"></string>
+    <string name="Lesson1Text4"></string>
+    <string name="Lesson1Text5"></string>
+    <string name="Lesson1Text6"></string>
+    
+
+</resources>

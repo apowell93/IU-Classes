@@ -1,0 +1,96 @@
+package edu.indiana.learnguitar;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class LearnGuitarIndSong extends Activity {
+
+	public static final String GPOS = "edu.indiana.learnguitar.gPosition";
+	public static final int DEFAULT_SONG = 0;	
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        //layout params for objects in layout
+        LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        
+        
+        //data for songs
+        
+        
+        
+        
+        
+        //END of data for songs
+        
+        
+        
+    	//array containing all the arrays of the songs, one is used based on user selection on prev page
+    	ArrayList<ArrayList<Object>> songsList = new ArrayList<ArrayList<Object>>();
+    	//songsList.add(song1);
+        
+        //scales position passed through from user selection
+		int songPosition = getIntent().getIntExtra(GPOS, DEFAULT_SONG);
+			
+		//initialize layout of activity
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		layout.setBackgroundColor(Color.DKGRAY);
+		
+		
+		//current scale to be displayed
+		ArrayList<Object> currentSong = songsList.get(songPosition);
+		//set title
+		setTitle(currentSong.get(0).toString());
+        
+		//set remainder of layout - loops through currentSong array to add textViews and/or images
+		for (int p = 1; p < currentSong.size(); p++) {
+			if (currentSong.get(p) instanceof String) { //then textview will be added to layout
+				TextView text = new TextView(this);
+		        text.setLayoutParams(lparams);
+				text.setTextAppearance(this, android.R.attr.textAppearanceMedium);
+			    text.setText(currentSong.get(p).toString());
+				layout.addView(text);
+			} else { //if its not text, it'll be an image
+				ImageView image = (ImageView) currentSong.get(p);
+				image.setLayoutParams(lparams);
+				//image.setImageResource();
+				layout.addView(image);
+			}
+		}
+		setContentView(layout);
+
+	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }	
+	
+}

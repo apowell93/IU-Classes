@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- styled_button.xml
+Creates style of the buttons used in the application
+Created by: Anthony Powell
+Created on: 3/6/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/2/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_pressed="true" >
+    <shape>
+      <solid
+          android:color="#990a11" />
+      <stroke
+          android:width="1dp"
+          android:color="#992f2f" />
+      <corners
+          android:radius="6dp" />
+      <padding
+          android:left="10dp"
+          android:top="10dp"
+          android:right="10dp"
+          android:bottom="10dp" />
+    </shape>
+  </item>
+  <item>
+    <shape>
+      <gradient
+          android:startColor="#ef4444"
+          android:endColor="#992f2f"
+          android:angle="270" />
+      <stroke
+          android:width="1dp"
+          android:color="#992f2f" />
+      <corners
+          android:radius="6dp" />
+      <padding
+          android:left="10dp"
+          android:top="10dp"
+          android:right="10dp"
+          android:bottom="10dp" />
+    </shape>
+  </item>
+</selector>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tunerText1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp"
+        android:stretchColumns="*" >
+        
+        <TableRow >
+  			<Button
+  			    android:id="@+id/tunerButtonELow"
+  			    android:text="@string/ELowLabel" />
+  			<Button
+  			    android:id="@+id/tunerButtonA"
+  			    android:text="@string/ALabel" />
+		</TableRow>
+       	<TableRow >
+       	    <Button
+  			    android:id="@+id/tunerButtonD"
+  			    android:text="@string/DLabel" />
+  			<Button
+  			    android:id="@+id/tunerButtonG"
+  			    android:text="@string/GLabel" />
+       	</TableRow>
+       	<TableRow >
+       		<Button
+  			    android:id="@+id/tunerButtonB"
+  			    android:text="@string/BLabel" />
+  			<Button
+  			    android:id="@+id/tunerButtonEHigh"
+  			    android:text="@string/EHighLabel" />
+        </TableRow>
+        
+    </TableLayout>
+    
+</LinearLayout>

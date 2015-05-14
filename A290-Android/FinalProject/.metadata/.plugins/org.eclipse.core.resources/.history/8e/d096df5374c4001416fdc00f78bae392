@@ -1,0 +1,26 @@
+/* LearnGuitarAbout.java
+ * 
+ * Activity for the about page dialog
+ * 
+ * Created By: Anthony Powell (anjopowe)
+ * Created On: 3/3/2015
+ * Last Modified By: Anthony Powell (anjopowe)
+ * Last Modified On: 3/6/2015
+ * Assignment/Project: A290 Android Development
+ * Part Of: Final Project - Learn Guitar
+ */
+
+package edu.indiana.learnguitar;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class LearnGuitarAbout extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_learn_guitar_about);
+	}
+	
+}

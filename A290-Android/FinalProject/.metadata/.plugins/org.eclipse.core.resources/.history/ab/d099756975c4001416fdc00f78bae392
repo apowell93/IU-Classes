@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- styles.xml
+Creates string resources for app
+Created by: Anthony Powell
+Created on: 3/2/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/6/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- creates shortcut to access settings in top-right corner on title bar -->
+    <item android:id="@+id/SettingsMenu"
+ 		android:title="@string/SettingsLabel"
+ 		android:alphabeticShortcut="@string/SettingsShortcut" 
+ 	/>
+    
+</menu>

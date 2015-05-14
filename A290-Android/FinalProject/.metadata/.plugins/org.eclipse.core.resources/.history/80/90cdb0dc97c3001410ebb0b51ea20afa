@@ -1,0 +1,8 @@
+package edu.indiana.learnguitar;
+
+public class LearnGuitarIndScale {
+
+	public static final String SPOS = "edu.indiana.learnguitar.sPosition";
+	public static final int DEFAULT_SCALE = 0;	
+	
+}

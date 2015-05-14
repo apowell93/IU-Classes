@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- settings.xml
+Creates settings screen
+Created by: Anthony Powell
+Created on: 3/2/15
+Last Modified by: Anthony Powell
+Last Modified on: 3/2/15
+Assignment/Project: A290 Android Development
+Part of: Final Project - Learn Guitar
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+    
+
+</PreferenceScreen>

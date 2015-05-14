@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- strings.xml
+Defines strings for application
+Created by: Anthony Powell
+Created on: 2/17/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/19/15
+Assignment/Project: A290 Android Development
+Part of: Project 3 - A290 First Real Application
+-->
+
+<resources>
+
+    <string name="app_name">A290 First Real Application</string>
+    <string name="MainTitle">Welcome to my first Real Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="ContinueButtonLabel">Continue</string>
+    <string name="NewButtonLabel">New Game</string>
+    <string name="AboutButtonLabel">About</string>
+    <string name="ExitButtonLabel">Exit</string>
+    <string name="AboutText">Sudoku is a logic-based number placement puzzle. Starting with a partially completed 9x9 grid, the
+objective of the puzzle is to fill the remaining &amp;quot;open&amp;quot; tiles or spaces in the grid so
+that each row, each column, and each of the 3x3 boxes (also called blocks) contains the digits 1
+to 9 exactly once. HAVE FUN!</string>
+    <string name="AboutTitle">About My First A290 Application</string>
+    <string name="SettingsLabel">Settings&#8230;</string>
+	<string name="SettingsTitle">A290 First Real Application Settings</string>
+	<string name="SettingsShortcut">s</string>
+	<string name="MusicTitle">Music</string>
+	<string name="MusicDetail">Play Background Music</string>
+	<string name="HintsTitle">Hints</string>
+	<string name="HintsDetail">Show Hints During Play</string>
+	<string name="NewGameTitle">Difficulty Level</string>
+	<string name="EasyLabel">Easy</string>
+	<string name="MediumLabel">Medium</string>
+	<string name="HardLabel">Hard</string>
+	<string name="GameTitle">Game</string>
+	<string name="NoMovesLabel">No moves possible</string>
+	<string name="KeypadTitle">Keypad</string>
+
+</resources>

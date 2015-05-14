@@ -1,0 +1,85 @@
+package edu.indiana.learnguitar;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+public class LearnGuitarIndScale extends Activity {
+
+	public static final String SPOS = "edu.indiana.learnguitar.sPosition";
+	public static final int DEFAULT_SCALE = 0;	
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        //data for scales - scale diagrams to display
+        
+        
+        
+        
+        
+        //END of data for scales
+        
+        
+        
+    	//array containing all the arrays of the scales, one is used based on user selection on prev page
+    	ArrayList<ArrayList<Object>> scalesList = new ArrayList<ArrayList<Object>>();
+    	//scalesList.add(scale1);
+        
+        //scale position passed through from user selection
+		int scalePosition = getIntent().getIntExtra(SPOS, DEFAULT_SCALE);
+			
+		//initialize layout of activity
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		layout.setBackgroundColor(Color.DKGRAY);
+		
+		
+		//current scale to be displayed
+		ArrayList<Object> currentScale = scalesList.get(scalePosition);
+		//set title
+		setTitle(currentScale.get(0).toString());
+        
+		//set remainder of layout - loops through currentScale array to add diagrams
+		for (int p = 1; p < currentScale.size(); p++) {
+				ImageView image = (ImageView) currentScale.get(p);
+				LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+				image.setLayoutParams(lparams);
+			//	image.setImageResource();
+				layout.addView(image);
+		}
+		setContentView(layout);
+		
+		
+	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+	
+}

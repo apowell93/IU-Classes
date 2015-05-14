@@ -1,0 +1,107 @@
+package edu.indiana.learnguitar;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class LearnGuitarIndChord extends Activity {
+
+	public static final String CPOS = "edu.indiana.learnguitar.cPosition";
+	public static final int DEFAULT_CHORD = 0;
+	
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        
+        
+        //layout params for objects within layout
+        LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        
+        /*data for chords - START*/
+        int chordPosition = getIntent().getIntExtra(CPOS, DEFAULT_LESSON);
+        String title;
+        ImageView chordDiagram = new ImageView(this);
+        if (chordPosition == 0) {
+        	//A minor
+        	title = "A minor";
+        	chordDiagram.setImageResource(R.drawable.amajor);
+        	chordDiagram.setLayoutParams(lparams);
+        	chordDiagram.setId(View.generateViewId());
+        } else {
+        	title = "ERROR";
+        }
+
+        
+        //END of data for chords
+        
+        
+        
+    	//array containing all the arrays of the chords, one is used based on user selection on prev page
+    	ArrayList<ArrayList<Object>> chordsList = new ArrayList<ArrayList<Object>>();
+    	//chordsList.add(chord1);
+        
+        //chord position passed through from user selection
+		int chordPosition = getIntent().getIntExtra(CPOS, DEFAULT_CHORD);
+			
+		//initialize layout of activity
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		layout.setBackgroundColor(Color.DKGRAY);
+		
+		
+		//current chord to be displayed
+	//	ArrayList<Object> currentChord = chordsList.get(chordPosition);
+		//set title
+		setTitle("Chord");
+	//	setTitle(currentChord.get(0).toString());
+   /*     
+		//set remainder of layout - loops through currentChord array to add diagrams
+		for (int p = 1; p < currentChord.size(); p++) {
+				ImageView image = (ImageView) currentChord.get(p);
+				LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+				image.setLayoutParams(lparams);
+			//	image.setImageResource();
+				layout.addView(image);
+		}
+		setContentView(layout);
+	*/
+		
+		layout.addView(amajor);
+		setContentView(layout);
+		
+		
+	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+	
+}

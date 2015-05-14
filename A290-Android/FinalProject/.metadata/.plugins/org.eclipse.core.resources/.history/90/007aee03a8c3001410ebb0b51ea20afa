@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Learn Guitar</string>
+    <string name="about_name">About \'Learn Guitar\'</string>
+    <string name="lessons_name">Lessons</string>
+    <string name="chords_name">Chords</string>
+    <string name="scales_name">Scales</string>
+    <string name="songs_name">Songs for Beginners</string>
+    <string name="tuner_name">Tuner</string>
+    
+    <string name="indLesson_name">Lesson</string>
+    <string name="indChord_name">Chord</string>
+    <string name="indScale_name">Scale</string>
+    <string name="indSong_name">Song</string>
+   
+    
+    <string name="action_settings">Settings</string>
+    <string name="SettingsLabel">Settings&#8230;</string>
+    <string name="SettingsShortcut">s</string>
+    <string name="SettingsTitle">Learn Guitar Settings</string>
+    
+    <string name="LessonsButtonLabel">Beginner Lessons</string>
+    <string name="ChordsButtonLabel">Chords</string>
+    <string name="ScalesButtonLabel">Scales</string>
+    <string name="SongsButtonLabel">Learn Songs</string>
+    <string name="TunerButtonLabel">Tuner</string>
+    <string name="AboutButtonLabel">About</string>
+    <string name="ExitButtonLabel">Exit</string>
+    <string name="MainActivityString1">Welcome!</string>
+    <string name="MainActivityString2">Select the page you\'d like to view:</string>
+
+    <string name="AboutText">add text for about dialog</string>
+    
+    <!-- Tuner strings -->
+    <string name="ELowLabel">E (Low)</string>
+    <string name="ALabel">A</string>
+    <string name="DLabel">D</string>
+    <string name="GLabel">G</string>
+    <string name="BLabel">B</string>
+    <string name="EHighLabel">E (High)</string>
+    
+<!--  DATA STRINGS FOR LESSONS -->
+    <!-- Lesson 1 Data Strings  -->
+    <string name="Lesson1Text1">\n\rHello and welcome to \'Learn Guitar\'! In this course, I will go over the basics 
+    			of learning how to play the guitar, acoustic or electric. In addition to the basic lessons, 
+    			I have included sections in the application with chord and scale diagrams, tabs and chords for 
+    			several beginner\'s songs, and a tuner to assist you and make sure you don\'t have to jump from 
+    			my application to another app or website; you can get all the information you need right here!\n\r</string>
+    <string name="Lesson1Text2">\rIn this introduction lesson, I\'m going to show you some basics about reading chord  
+    			 diagrams and tabs. We will always be using standard tuning for the beginner\'s lessons. 
+    			 In standard tuning, the 6 strings on your guitar, from the top (thickest) string to 
+    			 the bottom (thinnest) are as follows: E(6), A(5), D(4), G(3), B(2), E(1).  A phase to help remember 
+    			 these string names at first is: (E)very (A)dult (D)og (G)rowls, (B)arks, (E)ats.\n\r</string>
+    <string name="Lesson1Text3">\rThe following image is a chord diagram. The chord being shown is A major, but for now
+    			 we\'ll just focus on how to read the diagram. Each line represents a string on the guitar, with the
+    			 leftmost line being the low E string, or 6th string (thickest). The thick bar at the top represents
+    			 the nut of the guitar, which is the piece just before the first fret, generally made of bone or
+    			 some form of plastic.\n\r</string>
+    <string name="Lesson1Text4">\n\rUnderneath each string is a value. If there is an \'X\', you do not play the string.
+    			 If there is a \'0\', you play the string open, or without any fingers on the frets. Otherwise, the 
+    			 numbers represent which finger to use to play the fret on the string. The black circles indicate that
+    			 you are to play this fret on the guitar. So, with A major, you would play with your 1st 3 fingers on the
+    			 second fret of the 2nd, 3rd, and 4th strings, as well as the open 5th and 1st strings.\n\r</string>
+    <string name="Lesson1Text5">\n\rThe above is an example of a tab, which is a way to represent the notes played in a song
+    			when individual notes are used. The bottom string on the tab diagram is the low E (6th string), and 
+    			the top is the high E (1st string). The numbers on the tabs represent the fret to be played, and they
+    			are played on the string on which they appear. So, for this tab, you play the 3rd fret, then the 5th fret, 
+    			and the 3rd fret again on the high E string first. Then, you play the 5th fret then the 3rd fret on the B
+    			string, and so on.\n\r</string>
+    <string name="Lesson1Text6">\rThat\'s all for this lesson. I just wanted to give you a basic idea of how to read and understand
+    			some of the diagrams and terminology that I\'ll be using throughout these lessons. You\'re now ready for lesson 2!\n\r</string>
+<!-- END DATA STRINGS FOR LESSONS -->
+
+
+
+<!--  DATA STRINGS FOR SONGS -->
+
+<!--  END DATA STRINGS FOR SONGS -->
+
+</resources>

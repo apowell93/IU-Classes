@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- first_real_app_main.xml
+Creates layout for displaying action_settings, or the screen to select the settings option
+Created by: Anthony Powell
+Created on: 2/17/15
+Last Modified by: Anthony Powell
+Last Modified on: 2/19/15
+Assignment/Project: A290 Android Development
+Part of: Project 3 - A290 First Real Application
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.indiana.a290firstrealapplication.FirstRealAppMainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+</menu>

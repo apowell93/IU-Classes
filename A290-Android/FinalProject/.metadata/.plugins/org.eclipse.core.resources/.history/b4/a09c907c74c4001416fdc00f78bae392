@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.indiana.learnguitar"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!--  main page activity -->
+        <activity
+            android:name=".LearnGuitarMain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- about page activity -->
+        <activity
+            android:name=".LearnGuitarAbout"
+            android:label="@string/about_name"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        
+        <!-- lessons home activity -->
+        <activity
+            android:name=".LearnGuitarLessons"
+            android:label="@string/lessons_name" >
+        </activity>
+        
+        <!-- chords home activity -->
+        <activity
+            android:name=".LearnGuitarChords"
+            android:label="@string/chords_name" >
+        </activity>
+        
+        <!-- scales home activity -->
+        <activity
+            android:name=".LearnGuitarScales"
+            android:label="@string/scales_name" >
+        </activity>
+        
+        <!-- songs home activity -->
+        <activity
+            android:name=".LearnGuitarSongs"
+            android:label="@string/songs_name" >
+        </activity>
+        
+        <!-- tuner activity -->
+        <activity
+            android:name=".LearnGuitarTuner"
+            android:label="@string/tuner_name" >
+        </activity>
+    
+        <!-- preferences/settings activity -->
+        <activity
+            android:name=".LearnGuitarPrefsActivity"
+            android:label="@string/SettingsTitle" >
+        </activity>
+        
+        <!-- individual lessons activity -->
+        <activity
+            android:name=".LearnGuitarIndLesson"
+            android:label="@string/indLesson_name" >
+        </activity>
+        
+        <!-- individual chords activity -->
+        <activity
+            android:name=".LearnGuitarIndChord"
+            android:label="@string/indChord_name" >
+        </activity>
+        
+        <!-- individual scales activity -->
+        <activity
+            android:name=".LearnGuitarIndScale"
+            android:label="@string/indScale_name" >
+        </activity>
+
+            
+    </application>
+
+</manifest>

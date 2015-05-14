@@ -1,0 +1,125 @@
+/* LearnGuitarIndScale.java
+ * 
+ * Activity for the individual scales page of the application
+ * 
+ * Created By: Anthony Powell (anjopowe)
+ * Created On: 3/3/2015
+ * Last Modified By: Anthony Powell (anjopowe)
+ * Last Modified On: 3/6/2015
+ * Assignment/Project: A290 Android Development
+ * Part Of: Final Project - Learn Guitar
+ */
+
+package edu.indiana.learnguitar;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+public class LearnGuitarIndScale extends Activity {
+
+	public static final String SPOS = "edu.indiana.learnguitar.sPosition";
+	public static final int DEFAULT_SCALE = 0;	
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+       
+        //layout params for objects within layout
+        LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        
+        
+        /*data for scales - START*/
+        int scalePosition = getIntent().getIntExtra(SPOS, DEFAULT_SCALE);
+        String title;
+        ImageView scaleDiagram = new ImageView(this);
+        if (scalePosition == 0) {
+        	//Chromatic scale
+        	title = "Chromatic Scale";
+        	scaleDiagram.setImageResource(R.drawable.chromaticscale);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else if (scalePosition == 1) {
+        	title = "Major Scale - Position 1";
+        	scaleDiagram.setImageResource(R.drawable.majorp1);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else if (scalePosition == 2) {
+        	title = "Major Scale - Position 2";
+        	scaleDiagram.setImageResource(R.drawable.majorp2);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else if (scalePosition == 3) {
+        	title = "Major Scale - Position 3";
+        	scaleDiagram.setImageResource(R.drawable.majorp3);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else if (scalePosition == 4) {
+        	title = "Minor Pentatonic Scale - Position 1";
+        	scaleDiagram.setImageResource(R.drawable.minorpp1);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else if (scalePosition == 5) {
+        	title = "Minor Pentatonic Scale - Position 2";
+        	scaleDiagram.setImageResource(R.drawable.minorpp1);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else if (scalePosition == 6) {
+        	title = "Major Pentatonic Scale - Position 1";
+        	scaleDiagram.setImageResource(R.drawable.majorpp1);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        } else {
+        	//defaults to chromatic scale diagram
+        	title = "Chromatic Scale";
+        	scaleDiagram.setImageResource(R.drawable.chromaticscale);
+        	scaleDiagram.setLayoutParams(lparams);
+        	scaleDiagram.setId(View.generateViewId());
+        }
+
+        //END of data for scales
+
+		//initialize layout of activity
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		layout.setGravity(Gravity.CENTER);
+		layout.setBackgroundColor(Color.parseColor("#f7daa7"));
+		layout.setPadding(10, 10, 10, 10);
+		//set title of page
+		setTitle(title);
+		//add chord diagram to layout
+		layout.addView(scaleDiagram);
+		
+		//set content view to the layout
+		setContentView(layout);
+	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.learn_guitar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+	
+}
